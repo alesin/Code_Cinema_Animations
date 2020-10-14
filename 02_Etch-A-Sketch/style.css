@@ -1,6 +1,9 @@
 body {
     margin: 0;
-    height: 100vh;
+    /* height: 100vh; */
+    min-height: 5800px;
+    /* overflow-x: scroll; */
+    /* overflow-x: hidden; */
 }
 pre {
     overflow-x: auto;
@@ -9,46 +12,91 @@ pre {
     white-space: -pre-wrap;
     white-space: -o-pre-wrap;
     word-wrap: break-word;
+
+    /* TODO: TEMP for development */
+    margin: .5em 0;
+    /* border: 1px dashed rgb(119, 119, 119); */
+    background-color: rgba(78, 78, 78, 0.25);
 }
 
 .container {
     background-color: rgb(184, 184, 184);
     height: 100vh;
+    width: 100%;
     display: flex;
     justify-content: space-between;
+    position: fixed;
 }
 
 .browser {
     background-color: ivory;
-    width: 32vw;
+    /* width: 32vw; */
+    width: 30vw;
     padding: 0 1em 0 1em;
 }
 
 .code {
     background-color: lavender;
-    flex-grow: 1;
+    /* flex-grow: 1; */
+    width: 70vw;
 
     display: flex;
     /* justify-content: space-around; */
 }
 
 .html-code {
-    /* width: 50%; */
+    width: 50%;
     padding: 0 1em 0 1em;
+
+    /* TODO: TEMP for development */
+    border: 2px solid rgb(124, 81, 224);
 }
+.html_line {
+    /* TODO: TEMP for development */
+    border: 2px dotted rgb(124, 81, 224);
+    /* background-color: plum; */
+}
+
 .js-code {
     width: 50%;
     padding: 0 1em 0 1em;
     flex-grow: 1;
+
+    /* TODO: TEMP for development */
+    border: 2px solid rgb(236, 19, 55);
 }
 
+.js-code .level0 {
+    /* TODO: TEMP for development */
+    border: 2px dashed rgb(236, 19, 55);
+}
 .js-code .level1 {
     padding-left: 1em;
+
+    /* TODO: TEMP for development */
+    border: 2px dashed rgb(236, 19, 55);
 }
 .js-code .level2 {
     padding-left: 2em;
+
+    /* TODO: TEMP for development */
+    border: 2px dashed rgb(233, 122, 140);
 }
 
 .container_highlight {
     background-color: rgba(163, 9, 32, 0.25);
+}
+
+/*  SVG  */
+.svgs {
+    width: 0%;
+}
+
+#magnifying_glass {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' version='1.1' viewBox='0 0 512 512'%3E%3Cpath d='m195.2 6.3c-104.2 0-189 84.8-189 189 0 104.2 84.8 189 189 189 40.9 0 78.7-13 109.7-35.2l128.9 148.7c8.7 10.2 25.6 10.7 34.9 1l30-30c4.7-4.7 7.2-11.1 7-17.7-0.2-6.6-3.1-12.8-8-17.2l-148.7-128.9c22.1-30.9 35.2-68.8 35.2-109.7 0-104.2-84.8-189-189-189zm0 45c79.4 0 144 64.6 144 144 0 79.4-64.6 144-144 144-79.4 0-144-64.6-144-144 0-79.4 64.6-144 144-144z'/%3E%3C/svg%3E");
+    width: 30px;
+    height: 30px;
+    /* transform: translateX(100px); */
+    /* transform: translate(100px, 400px); */
+    transform: translate(20px, 100px);
 }
